@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header.tsx";
-import VideoRoom from "./components/VideoRoom/VideoRoom.tsx";
+import Header from "./components/Header/Header";
+import VideoRoom from "./components/VideoRoom/VideoRoom";
 
 function App() {
   const [joined, setJoined] = useState<boolean>(false);

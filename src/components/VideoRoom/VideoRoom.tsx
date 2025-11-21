@@ -9,7 +9,7 @@ import AgoraRTC, {
   UID,
 } from "agora-rtc-sdk-ng";
 import React, { useEffect, useState } from "react";
-import VideoPlayer from "../VideoPlayer/VideoPlayer.tsx";
+import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 const APP_ID = "be5b47c8df4c4b7c8e07d771df2b2ab4";
 const TOKEN =
@@ -99,12 +99,14 @@ const VideoRoom: React.FC<VideoRoomProps> = ({ setJoined }) => {
   const toggleMic = () => {
     if (localTracks.length > 0) {
       const audioTrack = localTracks[0];
-      if (micMuted) {
-        audioTrack.setEnabled(true);
-      } else {
-        audioTrack.setEnabled(false);
+      if (audioTrack) {
+        if (micMuted) {
+          audioTrack.setEnabled(true);
+        } else {
+          audioTrack.setEnabled(false);
+        }
+        setMicMuted(!micMuted);
       }
-      setMicMuted(!micMuted);
     }
   };
 
