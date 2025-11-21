@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import VideoRoom from "./components/VideoRoom/VideoRoom";
+import Header from "./components/Header/Header.tsx";
+import VideoRoom from "./components/VideoRoom/VideoRoom.tsx";
 
 function App() {
-  const [joined, setJoined] = useState(false);
+  const [joined, setJoined] = useState<boolean>(false);
 
   return (
     <div className="App">

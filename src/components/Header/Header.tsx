@@ -4,7 +4,7 @@ import Avatar from "@mui/material/Avatar";
 import React from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <div className="header">
       <DuoIcon sx={{ color: "white", width: "50px", height: "50px" }} />
